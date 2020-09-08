@@ -28,7 +28,4 @@ function App() {
   );
 }
 
-// router install
-// npm install --save react-router-dom
-
 export default App;
