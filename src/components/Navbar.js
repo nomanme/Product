@@ -42,7 +42,6 @@ background: var(--mainBlue);
   text-transform: capitalize;
 }
 `;
-// git fatal fewrf
-// dbfsdoif
+
 
 export default Navbar;
