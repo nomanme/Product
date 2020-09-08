@@ -4,11 +4,17 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+import { ProductProvider } from "./Context";
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <ProductProvider>
+
+    <Router>
+      <App />
+    </Router>
+
+  </ProductProvider>
+  ,
   // <React.StrictMode></React.StrictMode>
   document.getElementById("root")
 );

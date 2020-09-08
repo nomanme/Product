@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { ProductConsumer } from "../Context";
 
 class Product extends Component {
   render() {
     return (
+
       <div>
-        <h3>This is Product</h3>
-      </div>
+        <h3> This is Product</h3>
+      </div >
     );
   }
 }
