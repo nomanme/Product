@@ -25,14 +25,13 @@ class ProductList extends Component {
               <ProductConsumer>
                 {(value) => {
                   // console.log(value);
-                  value.products.map(product => {
+                  return value.products.map(product => {
                     return <Product key={product.id} product={product} handleDetail={value.handleDetail}>
 
                     </Product>
                   })
                 }}
               </ProductConsumer>
-
             </div>
           </div>
 

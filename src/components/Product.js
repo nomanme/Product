@@ -5,6 +5,7 @@ import { ProductConsumer } from "../Context";
 
 class Product extends Component {
   render() {
+    const { id, title, img, price, inCart } = this.props.product
     return (
 
       <div>
