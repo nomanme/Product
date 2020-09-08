@@ -11,12 +11,44 @@ class ProductProvider extends Component {
         products: storeProducts,
         detailProduct: detailProduct,
     }
+
+    componentDidMount() {
+        this.setProducts();
+    }
+
+    setProducts = () => {
+        let products = [];
+        storeProducts.forEach(item => {
+            const singleItem = { ...item };
+            products = [...products, singleItem];
+        });
+        this.setState(() => {
+            return { products };
+        }, this.checkCartItems);
+    };
+
     handleDetail = () => {
         console.log("hello details");
     }
+
     addToCart = () => {
         console.log("hello carts");
     }
+
+    // tester = () => {
+    //     console.log('State Product : ', this.state.products[0].inCart);
+    //     console.log('Data Product : ', storeProducts[0].inCart);
+    //     const tempProducts = [...this.state.products];
+    //     tempProducts[0].inCart = true;
+    //     this.setState(() => {
+    //         return { products: tempProducts }
+    //     }, () => {
+    //         console.log('State Product : ', this.state.products[0].inCart);
+    //         console.log('Data Product : ', storeProducts[0].inCart);
+    //     })
+    // }
+
+
     render() {
         return (
             <ProductContext.Provider value={{
@@ -24,6 +56,7 @@ class ProductProvider extends Component {
                 handleDetail: this.handleDetail,
                 addToCart: this.addToCart
             }}>
+                {/* <button onClick={this.tester}>Test Me</button> */}
                 {this.props.children}
 
             </ProductContext.Provider>
