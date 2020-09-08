@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { ProductConsumer } from "../Context";
+import propTypes from "prop-types";
+// import { ProductConsumer } from "../Context";
 
 class Product extends Component {
   render() {
@@ -38,12 +39,21 @@ class Product extends Component {
               {price}
             </h5>
           </div>
-
         </div>
       </ProductWrapper >
     );
   }
 }
+
+Product.propTypes = {
+  product: propTypes.shape({
+    id: propTypes.number,
+    img: propTypes.string,
+    title: propTypes.string,
+    price: propTypes.number,
+    inCart: propTypes.bool,
+  }).isRequired
+};
 
 const ProductWrapper = styled.div`
 .card{
