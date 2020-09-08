@@ -25,10 +25,20 @@ class Product extends Component {
                   :
                   (<i className="fas fa-cart-plus" />)
               }
-
             </button>
-
           </div>
+          {/* card footer */}
+
+          <div className="card-footer d-flex justify-content-between">
+            <p className="align-slef-center mb-0">
+              {title}
+            </p>
+            <h5 className="text-blue font-strong mb-0">
+              <span className="mr-1">$</span>
+              {price}
+            </h5>
+          </div>
+
         </div>
       </ProductWrapper >
     );
