@@ -26,6 +26,7 @@ class Product extends Component {
                 // { console.log('go to cart'); }
                 {
                   value.addToCart(id);
+                  value.openModal()
                 }}>
 
                   {
