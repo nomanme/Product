@@ -9,6 +9,8 @@ import Cart from "./components/Cart";
 import Default from "./components/Default";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
+import Modal from "./components/Modal";
+
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
       <Details></Details>
       <Cart></Cart> */}
       {/* <Default></Default> */}
+      <Modal></Modal>
     </React.Fragment>
+
   );
 }
 
